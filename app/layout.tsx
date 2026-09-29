@@ -1,4 +1,5 @@
-import { Poppins, Geist_Mono } from "next/font/google"
+import { Poppins, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -13,7 +14,15 @@ const poppins = Poppins({
 const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-})
+});
+
+const clashDisplay = localFont({
+  src: "../public/fonts/WEB/fonts/ClashDisplay-Variable.woff2",
+  variable: "--font-clash",
+  display: "swap",
+});
+
+import Navbar from "@/components/navbar";
 
 export default function RootLayout({
   children,
@@ -24,12 +33,13 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, poppins.variable, "font-sans")}
+      className={cn("antialiased", fontMono.variable, poppins.variable, clashDisplay.variable, "font-sans")}
     >
       <body>
         <ThemeProvider>
-          <div className="max-w-[1440px] mx-auto w-full">
-            <div className="max-w-[1200px] mx-auto w-full">
+          <div className="max-w-[1440px] mx-auto w-full relative">
+            <div className="max-w-[1200px] mx-auto w-full relative">
+              <Navbar />
               {children}
             </div>
           </div>
