@@ -1,22 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-
-export interface CourseCardProps {
-  id?: string | number;
-  title: string;
-  author: string;
-  rating: number;
-  price: number;
-  image: string;
-  lessons: number;
-  duration: string;
-  comments: number;
-  level: string;
-  studentCount: number;
-  avatars: string[];
-}
+import { CourseCardProps } from "@/types";
 
 export default function CourseCard({
+  id,
   title,
   author,
   rating,
@@ -30,7 +17,10 @@ export default function CourseCard({
   avatars,
 }: CourseCardProps) {
   return (
-    <div className="w-[373px] h-[384px] p-4 rounded-[24px] border border-neutral-200 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer">
+    <Link 
+      href={`/courses/${id || 1}`}
+      className="w-[373px] h-[384px] p-4 rounded-[24px] border border-neutral-200 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer"
+    >
       {/* Image Container */}
       <div className="relative w-full h-[190px] rounded-[16px] overflow-hidden shrink-0">
         <Image
@@ -90,6 +80,6 @@ export default function CourseCard({
           <span className="text-body-xs text-neutral-500">/lifetime</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
