@@ -81,7 +81,7 @@ export default function CourseReviews() {
                   style={{ width: `${stat.percentage}%` }}
                 />
               </div>
-              
+
               {/* Stars */}
               <div className="flex items-center gap-1 shrink-0">
                 {Array.from({ length: 5 }).map((_, starIdx) => (
@@ -95,7 +95,7 @@ export default function CourseReviews() {
                   />
                 ))}
               </div>
-              
+
               {/* Count */}
               <span className="text-label-m text-neutral-500 w-[30px] text-right shrink-0">
                 {stat.count}
@@ -108,7 +108,7 @@ export default function CourseReviews() {
       {/* Reviews Section */}
       <div className="flex flex-col gap-6">
         <h3 className="text-heading-xs text-neutral-950 font-bold">Individual Reviews:</h3>
-        
+
         {/* Filters */}
         <CourseReviewFilters />
 
