@@ -3,13 +3,23 @@ import { Search, ChevronDown } from "lucide-react";
 export default function CourseHero() {
   return (
     <section
-      className="w-full h-[360px] bg-electric-violet-600 pt-[120px] px-4 flex flex-col justify-center"
-      style={{
-        backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.1) 2px, transparent 2px), linear-gradient(to bottom, rgba(255,255,255,0.1) 2px, transparent 2px)`,
-        backgroundSize: `120px 120px`,
-        backgroundPosition: 'center top'
-      }}
+      className="w-full h-[360px] bg-electric-violet-800 pt-[120px] px-4 flex flex-col justify-center relative overflow-hidden"
     >
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        viewBox="0 0 1440 360"
+      >
+        {Array.from({ length: 13 }).map((_, i) => {
+          const x = Math.round(((i + 1) / 14) * 1440);
+          return <line key={`v-${i}`} x1={x} y1={0} x2={x} y2={360} stroke="rgba(255,255,255,0.15)" strokeWidth="1" />;
+        })}
+        {Array.from({ length: 3 }).map((_, i) => {
+          const y = Math.round(((i + 1) / 4) * 360);
+          return <line key={`h-${i}`} x1={0} y1={y} x2={1440} y2={y} stroke="rgba(255,255,255,0.15)" strokeWidth="1" />;
+        })}
+      </svg>
       <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center">
         <h1 className="text-heading-m md:text-heading-s text-neutral-50 mb-8">
           Find Your Next Course

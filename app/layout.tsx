@@ -39,17 +39,17 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider>
-          <div className="w-full relative min-h-screen flex flex-col">
+          <div className="max-w-[1440px] mx-auto w-full min-h-screen relative flex flex-col bg-white overflow-hidden shadow-2xl">
             <div className="absolute top-0 left-0 w-full z-50">
-              <div className="max-w-[1200px] mx-auto w-full relative px-4 xl:px-0">
+              <div className="max-w-[1200px] mx-auto w-full relative">
                 <Navbar />
               </div>
             </div>
             <div className="flex-1 w-full">
               {children}
             </div>
+            <Footer />
           </div>
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

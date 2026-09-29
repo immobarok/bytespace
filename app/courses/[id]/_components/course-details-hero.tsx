@@ -1,17 +1,29 @@
 import Image from "next/image";
 import CourseSidebar from "./course-sidebar";
 
-export default function CourseDetailsHero() {
+export default function CourseDetailsHero({ children }: { children?: React.ReactNode }) {
   return (
     <div className="w-full relative min-h-screen">
       <div 
-        className="absolute top-0 left-0 w-full h-[957px] bg-electric-violet-600 z-0"
-        style={{
-          backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.1) 2px, transparent 2px), linear-gradient(to bottom, rgba(255,255,255,0.1) 2px, transparent 2px)`,
-          backgroundSize: `120px 120px`,
-          backgroundPosition: 'center top'
-        }}
-      />
+        className="absolute top-0 left-0 w-full h-[957px] z-0"
+        style={{ backgroundColor: '#003be2' }}
+      >
+        <svg
+          className="absolute inset-0 w-full h-full"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          viewBox="0 0 1440 957"
+        >
+          {Array.from({ length: 13 }).map((_, i) => {
+            const x = Math.round(((i + 1) / 14) * 1440);
+            return <line key={`v-${i}`} x1={x} y1={0} x2={x} y2={957} stroke="rgba(255,255,255,0.15)" strokeWidth="1" />;
+          })}
+          {Array.from({ length: 9 }).map((_, i) => {
+            const y = Math.round(((i + 1) / 9) * 957);
+            return <line key={`h-${i}`} x1={0} y1={y} x2={1440} y2={y} stroke="rgba(255,255,255,0.15)" strokeWidth="1" />;
+          })}
+        </svg>
+      </div>
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-4 md:px-0 pt-[160px] w-full">
         {/* Top Header Row */}
@@ -63,6 +75,10 @@ export default function CourseDetailsHero() {
                   <Image src="/images/icons/play_button.svg" alt="Play" width={64} height={64} />
                 </div>
               </div>
+            </div>
+            
+            <div>
+              {children}
             </div>
           </div>
           
