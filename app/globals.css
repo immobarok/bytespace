@@ -1,3 +1,4 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -74,7 +75,7 @@
 }
 
 @theme inline {
-    --font-sans: var(--font-sans);
+    --font-sans: 'Satoshi', ui-sans-serif, system-ui, sans-serif;
     --font-heading: var(--font-heading);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
@@ -129,4 +130,77 @@
   html {
     @apply font-sans;
     }
+}
+
+@layer utilities {
+  /* Headings (Poppins) */
+  .text-heading-l {
+    font-family: var(--font-heading);
+    font-size: 72px;
+    line-height: 1.2;
+  }
+  .text-heading-m {
+    font-family: var(--font-heading);
+    font-size: 44px;
+    line-height: 1.2;
+  }
+  .text-heading-s {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  .text-heading-xs {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  /* Body (Satoshi) */
+  .text-body-l {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .text-body-m {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .text-body-s {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .text-body-xs {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  /* Labels (Satoshi) */
+  .text-label-xl {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .text-label-l {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .text-label-m {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .text-label-s {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .text-label-xs {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    line-height: 1.2;
+  }
 }
