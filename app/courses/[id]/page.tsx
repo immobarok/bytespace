@@ -2,6 +2,7 @@ import CourseDetailsHero from "./_components/course-details-hero";
 import CourseTabs from "./_components/course-tabs";
 import CourseAbout from "./_components/course-about";
 import CourseLessons from "./_components/course-lessons";
+import CourseReviews from "./_components/course-reviews";
 
 export default async function CourseDetailsPage({
   params,
@@ -20,11 +21,7 @@ export default async function CourseDetailsPage({
           <CourseTabs />
           {tab === "about" && <CourseAbout />}
           {tab === "lessons" && <CourseLessons />}
-          {tab === "reviews" && (
-            <div className="py-20 text-center text-body-m text-neutral-500">
-              Reviews content coming soon...
-            </div>
-          )}
+          {tab === "reviews" && <CourseReviews />}
         </div>
       </CourseDetailsHero>
     </div>

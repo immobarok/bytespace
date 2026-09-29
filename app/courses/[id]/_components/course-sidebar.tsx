@@ -42,7 +42,7 @@ export default function CourseSidebar() {
         <span className="text-body-s text-neutral-500">/lifetime</span>
       </div>
 
-      <button className="w-full h-12 rounded-[100px] bg-lime-500 hover:bg-lime-400 transition-colors text-body-m font-semibold text-neutral-950 mb-8">
+      <button className="w-full h-12 rounded-[100px] bg-lime-400 hover:bg-lime-400 transition-colors text-body-m font-semibold text-neutral-950 mb-8">
         Enroll Now
       </button>
 
