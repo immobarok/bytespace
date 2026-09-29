@@ -1,15 +1,17 @@
 import CourseDetailsHero from "./_components/course-details-hero";
 import CourseTabs from "./_components/course-tabs";
 import CourseAbout from "./_components/course-about";
+import CourseLessons from "./_components/course-lessons";
 
-export default function CourseDetailsPage({
+export default async function CourseDetailsPage({
   params,
   searchParams,
 }: {
-  params: { id: string };
-  searchParams: { tab?: string };
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ tab?: string }>;
 }) {
-  const tab = searchParams.tab || "about";
+  const resolvedSearchParams = await searchParams;
+  const tab = resolvedSearchParams.tab || "about";
 
   return (
     <div className="min-h-screen bg-white">
@@ -17,11 +19,7 @@ export default function CourseDetailsPage({
         <div className="pt-[160px] flex flex-col gap-2">
           <CourseTabs />
           {tab === "about" && <CourseAbout />}
-          {tab === "lessons" && (
-            <div className="py-20 text-center text-body-m text-neutral-500">
-              Lessons content coming soon...
-            </div>
-          )}
+          {tab === "lessons" && <CourseLessons />}
           {tab === "reviews" && (
             <div className="py-20 text-center text-body-m text-neutral-500">
               Reviews content coming soon...
