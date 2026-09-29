@@ -14,7 +14,7 @@ export default function NotFound() {
 
       <div className="relative flex flex-col items-center w-full">
         <div
-          className="text-[480px] font-semibold leading-none pointer-events-none select-none relative z-0 flex items-center justify-center"
+          className="text-[480px] max-lg:text-[250px] max-md:text-[150px] font-semibold leading-none pointer-events-none select-none relative z-0 flex items-center justify-center"
           style={{
             fontFamily: 'var(--font-heading)',
             letterSpacing: '-0.01em',
@@ -26,11 +26,11 @@ export default function NotFound() {
           404
         </div>
 
-        <div className="absolute top-[330px] flex flex-col items-center text-center z-10 w-full">
-          <h1 className="text-heading-l text-[#ffffff] max-w-[1000px]">
-            The page you are looking<br />for doesn’t exist
+        <div className="absolute top-[330px] max-lg:top-[200px] max-md:top-[120px] flex flex-col items-center text-center z-10 w-full px-4 lg:px-0">
+          <h1 className="text-heading-l max-lg:text-heading-m max-md:text-heading-s text-[#ffffff] max-w-[1000px]">
+            The page you are looking<br className="hidden md:block" />for doesn’t exist
           </h1>
-          <p className="text-body-l text-neutral-100 my-8 mb-10">
+          <p className="text-body-l max-lg:text-body-m max-md:text-body-s text-neutral-100 my-8 mb-10 max-lg:my-6 max-md:my-4">
             Try to use a correct url or go back to homepage to start again
           </p>
           <Link
