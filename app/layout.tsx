@@ -22,8 +22,8 @@ const clashDisplay = localFont({
   display: "swap",
 });
 
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "@/components/header/navbar";
+import Footer from "@/components/footer/footer";
 
 
 export default function RootLayout({
