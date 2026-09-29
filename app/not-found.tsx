@@ -35,7 +35,7 @@ export default function NotFound() {
           </p>
           <Link
             href="/"
-            className="bg-crimson-400 text-neutral-950 px-6 py-3 rounded-[24px] text-body-m font-semibold hover:bg-crimson-400 transition-colors"
+            className="bg-lime-400 text-neutral-950 px-6 py-3 rounded-[24px] text-body-m font-semibold hover:bg-lime-400 transition-colors"
           >
             Back to Home
           </Link>

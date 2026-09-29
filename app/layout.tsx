@@ -23,6 +23,8 @@ const clashDisplay = localFont({
 });
 
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+
 
 export default function RootLayout({
   children,
@@ -43,6 +45,7 @@ export default function RootLayout({
               {children}
             </div>
           </div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
