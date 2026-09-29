@@ -27,7 +27,13 @@ export default function RootLayout({
       className={cn("antialiased", fontMono.variable, poppins.variable, "font-sans")}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <div className="max-w-[1440px] mx-auto w-full">
+            <div className="max-w-[1200px] mx-auto w-full">
+              {children}
+            </div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )
