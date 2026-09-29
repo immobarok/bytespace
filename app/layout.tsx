@@ -39,9 +39,13 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider>
-          <div className="max-w-[1440px] mx-auto w-full relative">
-            <div className="max-w-[1200px] mx-auto w-full relative">
-              <Navbar />
+          <div className="w-full relative min-h-screen flex flex-col">
+            <div className="absolute top-0 left-0 w-full z-50">
+              <div className="max-w-[1200px] mx-auto w-full relative px-4 xl:px-0">
+                <Navbar />
+              </div>
+            </div>
+            <div className="flex-1 w-full">
               {children}
             </div>
           </div>
