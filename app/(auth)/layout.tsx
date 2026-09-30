@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CourseCard from "@/components/cards/course-card";
+import AuthText from "./_components/auth-text";
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   const avatars = [
@@ -43,12 +44,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         <div className="flex-1 flex flex-col lg:flex-row pb-10">
           
           <div className="w-full lg:w-1/2 flex flex-col mb-16 lg:mb-0 pt-4">
-          <div className="max-w-[475px] mb-[58px]">
-            <h1 className="text-heading-xs text-neutral-50 mb-4">Sign up and come in</h1>
-            <p className="text-body-l text-neutral-50">
-              The registration process is straightforward, uncomplicated, and efficient, allowing users to sign up quickly, easily, and at no cost
-            </p>
-          </div>
+          <AuthText />
 
           <div className="relative w-full flex-1 min-h-[500px] mt-10">
             <div className="absolute top-[90px] left-[0px] origin-top-left">
