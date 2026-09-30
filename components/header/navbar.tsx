@@ -32,10 +32,10 @@ export default function Navbar() {
 
       {/* Right: Actions */}
       <div className="flex items-center gap-[24px]">
-        <Link href="/signin" className="text-body-m text-neutral-50 hover:text-neutral-50/80 transition-colors">
+        <Link href="/login" className="text-body-m text-neutral-50 hover:text-neutral-50/80 transition-colors">
           Sign In
         </Link>
-        <Link href="/join" className="text-body-m text-neutral-50 hover:text-neutral-50/80 transition-colors">
+        <Link href="/register" className="text-body-m text-neutral-50 hover:text-neutral-50/80 transition-colors">
           Join Us
         </Link>
         <button className="flex items-center justify-center relative w-6 h-6 hover:opacity-75 transition-opacity">
