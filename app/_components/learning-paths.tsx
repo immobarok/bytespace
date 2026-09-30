@@ -30,7 +30,7 @@ const paths = [
 
 export default function LearningPaths() {
   return (
-    <section className="w-full bg-white flex flex-col items-center">
+    <section className="w-full bg-white flex flex-col items-center pb-[120px]">
       <div className="w-full flex flex-col items-center px-4">
         
         {/* Header Area */}
