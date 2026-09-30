@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "title": "Learn Figma from Basic",
+    "author": "purepearl studio",
+    "rating": 4.5,
+    "price": 25,
+    "image": "/images/products/1.png",
+    "lessons": 17,
+    "duration": "2 hours 16 mins",
+    "comments": 59,
+    "level": "Beginner",
+    "studentCount": 26,
+    "avatars": [
+      "/images/avatars/Ellipse.png",
+      "/images/avatars/Ellipse (1).png",
+      "/images/avatars/Ellipse (2).png"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Build Digital Asset",
+    "author": "purepearl studio",
+    "rating": 4.5,
+    "price": 25,
+    "image": "/images/products/2.png",
+    "lessons": 17,
+    "duration": "2 hours 16 mins",
+    "comments": 59,
+    "level": "Beginner",
+    "studentCount": 26,
+    "avatars": [
+      "/images/avatars/Ellipse.png",
+      "/images/avatars/Ellipse (1).png",
+      "/images/avatars/Ellipse (2).png"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "the Power of Big Data",
+    "author": "purepearl studio",
+    "rating": 4.5,
+    "price": 25,
+    "image": "/images/products/3.png",
+    "lessons": 17,
+    "duration": "2 hours 16 mins",
+    "comments": 59,
+    "level": "Beginner",
+    "studentCount": 26,
+    "avatars": [
+      "/images/avatars/Ellipse.png",
+      "/images/avatars/Ellipse (1).png",
+      "/images/avatars/Ellipse (2).png"
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Balancing Productivity an...",
+    "author": "purepearl studio",
+    "rating": 4.5,
+    "price": 25,
+    "image": "/images/products/4.png",
+    "lessons": 17,
+    "duration": "2 hours 16 mins",
+    "comments": 59,
+    "level": "Beginner",
+    "studentCount": 26,
+    "avatars": [
+      "/images/avatars/Ellipse.png",
+      "/images/avatars/Ellipse (1).png",
+      "/images/avatars/Ellipse (2).png"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Mastering Money Manage...",
+    "author": "purepearl studio",
+    "rating": 4.5,
+    "price": 25,
+    "image": "/images/products/5.png",
+    "lessons": 17,
+    "duration": "2 hours 16 mins",
+    "comments": 59,
+    "level": "Beginner",
+    "studentCount": 26,
+    "avatars": [
+      "/images/avatars/Ellipse.png",
+      "/images/avatars/Ellipse (1).png",
+      "/images/avatars/Ellipse (2).png"
+    ]
+  },
+  {
+    "id": "6",
+    "title": "From Idea to Startup Succ...",
+    "author": "purepearl studio",
+    "rating": 4.5,
+    "price": 25,
+    "image": "/images/products/6.png",
+    "lessons": 17,
+    "duration": "2 hours 16 mins",
+    "comments": 59,
+    "level": "Beginner",
+    "studentCount": 26,
+    "avatars": [
+      "/images/avatars/Ellipse.png",
+      "/images/avatars/Ellipse (1).png",
+      "/images/avatars/Ellipse (2).png"
+    ]
+  }
+]
