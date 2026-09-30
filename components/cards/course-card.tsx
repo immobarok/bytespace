@@ -15,12 +15,11 @@ export default function CourseCard({
   level,
   studentCount,
   avatars,
+  darkStudentBadge = false,
+  isStatic = false,
 }: CourseCardProps) {
-  return (
-    <Link 
-      href={`/courses/${id || 1}`}
-      className="w-[373px] h-[384px] p-4 rounded-[24px] border border-neutral-200 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer"
-    >
+  const cardContent = (
+    <>
       {/* Image Container */}
       <div className="relative w-full h-[190px] rounded-[16px] overflow-hidden shrink-0">
         <Image
@@ -53,7 +52,13 @@ export default function CourseCard({
           </div>
           <div className="flex items-center gap-1 shrink-0 mt-1">
             <span className="text-body-l text-neutral-700 leading-none">{rating.toFixed(1)}</span>
-            <Image src="/images/icons/star.svg" alt="star" width={20} height={20} className="object-contain" />
+            {isStatic ? (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.43 9.61158L12.96 4.77158C12.67 3.82158 11.33 3.82158 11.05 4.77158L9.56996 9.61158H5.11996C4.14996 9.61158 3.74996 10.8616 4.53996 11.4216L8.17996 14.0216L6.74996 18.6316C6.45996 19.5616 7.53996 20.3116 8.30996 19.7216L12 16.9216L15.69 19.7316C16.46 20.3216 17.54 19.5716 17.25 18.6416L15.82 14.0316L19.46 11.4316C20.25 10.8616 19.85 9.62158 18.88 9.62158H14.43V9.61158Z" fill="#D4FB20"/>
+              </svg>
+            ) : (
+              <Image src="/images/icons/star.svg" alt="star" width={20} height={20} className="object-contain" />
+            )}
           </div>
         </div>
 
@@ -69,7 +74,7 @@ export default function CourseCard({
                 <Image src={avatar} alt={`avatar-${idx}`} fill className="object-cover" />
               </div>
             ))}
-            <div className="w-[32px] h-[32px] rounded-full border-[2px] border-white bg-lime-500 flex items-center justify-center relative z-10 text-label-xs text-neutral-950">
+            <div className={`w-[32px] h-[32px] rounded-full border-[2px] border-white flex items-center justify-center relative z-10 text-label-xs ${darkStudentBadge ? "bg-neutral-950 text-white" : "bg-lime-500 text-neutral-950"}`}>
               {studentCount}+
             </div>
           </div>
@@ -80,6 +85,23 @@ export default function CourseCard({
           <span className="text-body-xs text-neutral-500">/lifetime</span>
         </div>
       </div>
+    </>
+  );
+
+  const baseClasses = "w-[373px] h-[384px] p-4 rounded-[24px] border border-neutral-200 bg-white flex flex-col group";
+  const linkClasses = "hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer";
+
+  if (isStatic) {
+    return (
+      <div className={baseClasses}>
+        {cardContent}
+      </div>
+    );
+  }
+
+  return (
+    <Link href={`/courses/${id || 1}`} className={`${baseClasses} ${linkClasses}`}>
+      {cardContent}
     </Link>
   );
 }

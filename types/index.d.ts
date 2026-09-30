@@ -11,4 +11,6 @@ export interface CourseCardProps {
   level: string;
   studentCount: number;
   avatars: string[];
+  darkStudentBadge?: boolean;
+  isStatic?: boolean;
 }
