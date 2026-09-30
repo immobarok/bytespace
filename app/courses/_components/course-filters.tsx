@@ -42,7 +42,7 @@ export default function CourseFilters() {
         </button>
       </div>
 
-      <div className="flex items-center gap-3 overflow-x-auto py-2 scrollbar-hide">
+      <div className="flex items-center gap-3 overflow-x-auto py-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         <button 
           onClick={() => setCategory("Featured")}
           className={`h-[40px] px-4 py-3 rounded-[24px] flex items-center justify-center text-body-s text-neutral-950 font-medium whitespace-nowrap shrink-0 transition-transform hover:scale-105 ${currentCategory === "Featured" ? "bg-lime-500" : "bg-neutral-50"}`}
