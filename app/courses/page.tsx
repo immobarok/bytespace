@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import CourseCard from "@/components/cards/course-card";
 import CourseFilters from "./_components/course-filters";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -31,7 +32,9 @@ export default function CoursesPage() {
       <section className="pb-20">
         <div className="max-w-[1200px] mx-auto w-full px-4">
           
-          <CourseFilters />
+          <Suspense fallback={<div className="h-[96px] w-full" />}>
+            <CourseFilters />
+          </Suspense>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mt-10">
             {MOCK_COURSES.map((course) => (

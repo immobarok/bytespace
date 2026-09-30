@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import HomeHero from "./_components/home-hero";
 import TrustedBy from "./_components/trusted-by";
 import LearningPaths from "./_components/learning-paths";
@@ -11,7 +12,9 @@ export default function Page() {
     <main className="w-full">
       <HomeHero />
       <TrustedBy />
-      <HomeCourses />
+      <Suspense fallback={<div />}>
+        <HomeCourses />
+      </Suspense>
       <LearningPaths />
       <FeaturesSection />
       <CtaSection />
