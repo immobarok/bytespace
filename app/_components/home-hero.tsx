@@ -45,19 +45,19 @@ export default function HomeHero() {
           Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
         </p>
 
-        <div className="flex flex-col bg-white p-2 rounded-3xl w-full shadow-lg gap-2">
-          <div className="flex items-center px-4 gap-3 w-full h-[44px]">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-400 shrink-0">
+        <div className="flex flex-row items-center gap-2 sm:gap-3 w-full max-w-[620px] mt-2 z-20 relative">
+          <div className="relative flex-1 w-full min-w-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400 shrink-0 sm:w-5 sm:h-5">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
             <input
               type="text"
               placeholder="Search topic"
-              className="flex-1 bg-transparent text-body-m text-neutral-900 placeholder:text-neutral-400 outline-none w-full"
+              className="w-full bg-white h-[48px] sm:h-[56px] rounded-full pl-10 sm:pl-12 pr-4 sm:pr-6 outline-none text-body-m text-neutral-900 placeholder:text-neutral-400 shadow-lg min-w-0"
             />
           </div>
-          <button className="bg-lime-400 text-neutral-950 font-semibold py-3 rounded-2xl w-full">
+          <button className="bg-lime-400 hover:bg-lime-500 text-neutral-950 font-semibold px-5 sm:px-8 h-[48px] sm:h-[56px] rounded-full transition-colors whitespace-nowrap shadow-lg shrink-0 text-sm sm:text-base">
             Search
           </button>
         </div>
@@ -100,7 +100,7 @@ export default function HomeHero() {
           <Image src="/images/shape/hero_top_right_lime_shape.svg" alt="" fill className="object-contain" />
         </div>
 
-        <div className="relative z-10 flex flex-col items-center text-center w-full max-w-[1200px] px-4 xl:px-0" style={{ marginTop: '179px' }}>
+        <div className="relative z-40 flex flex-col items-center text-center w-full max-w-[1200px] px-4 xl:px-0" style={{ marginTop: '179px' }}>
           <h1 className="text-heading-l text-white mb-6">
             Get Access to Hundreds<br />Courses Available
           </h1>
@@ -108,19 +108,19 @@ export default function HomeHero() {
             Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
           </p>
 
-          <div className="flex items-center bg-white p-2 rounded-full w-full max-w-[620px] shadow-lg">
-            <div className="flex-1 flex items-center px-5 gap-3">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-400 shrink-0">
+          <div className="flex flex-row items-center gap-3 w-full max-w-[620px]">
+            <div className="relative flex-1 w-full min-w-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="absolute left-5 top-1/2 -translate-y-1/2 text-neutral-400 shrink-0">
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
               <input
                 type="text"
                 placeholder="Search topic"
-                className="flex-1 bg-transparent text-body-m text-neutral-900 placeholder:text-neutral-400 outline-none h-[44px]"
+                className="w-full bg-white h-[56px] rounded-full pl-12 pr-6 outline-none text-body-m text-neutral-900 placeholder:text-neutral-400 shadow-lg min-w-0"
               />
             </div>
-            <button className="bg-lime-400 hover:bg-lime-500 text-neutral-950 font-semibold px-8 py-3 rounded-full transition-colors whitespace-nowrap">
+            <button className="bg-lime-400 hover:bg-lime-500 text-neutral-950 font-semibold px-8 h-[56px] rounded-full transition-colors whitespace-nowrap shadow-lg shrink-0">
               Search
             </button>
           </div>
