@@ -12,7 +12,7 @@ const categories = [
 export default function HomeCourses() {
   return (
     <section className="w-full bg-white py-24 flex flex-col items-center">
-      <div className="w-full max-w-[1200px] flex flex-col items-center px-4">
+      <div className="w-full max-w-[1200px] flex flex-col items-center px-4 xl:px-0">
         
         {/* Header Area */}
         <div className="text-center max-w-[917px] mb-12">

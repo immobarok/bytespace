@@ -51,7 +51,7 @@ export default function CtaSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-[900px] mx-auto px-4 flex flex-col items-center text-center">
+      <div className="relative z-10 w-full max-w-[900px] mx-auto px-4 xl:px-0 flex flex-col items-center text-center">
         <h2 className="text-neutral-50 text-heading-m mb-6">
           Unlock Your Potential as a<br />Creator with ByteSpace
         </h2>

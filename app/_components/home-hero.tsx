@@ -32,7 +32,7 @@ export default function HomeHero() {
         <Image src="/images/shape/hero_top_right_lime_shape.svg" alt="" fill className="object-contain" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center text-center w-full max-w-[1200px] px-4" style={{ marginTop: '179px' }}>
+      <div className="relative z-10 flex flex-col items-center text-center w-full max-w-[1200px] px-4 xl:px-0" style={{ marginTop: '179px' }}>
         <h1 className="text-heading-l text-white mb-6">
           Get Access to Hundreds<br />Courses Available
         </h1>

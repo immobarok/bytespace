@@ -36,7 +36,7 @@ export default function FeaturesSection() {
         style={{ width: '1137px', height: '1137px', background: 'radial-gradient(50% 50% at 50% 50%, rgba(0, 62, 178, 0.15) 0%, transparent 100%)' }}
       />
 
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 flex flex-col">
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 xl:px-0 flex flex-col">
 
         {/* ROW 1 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
@@ -137,7 +137,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* Happy Students Card */}
-            <div className="absolute bottom-[60px] right-[-10px] bg-white rounded-[16px] shadow-xl z-30 p-4 w-[240px]">
+            <div className="absolute bottom-[120px] right-[-10px] bg-white rounded-[16px] shadow-xl z-30 p-4 w-[240px]">
               <p className="font-bold text-neutral-950 mb-1 text-[14px]">Happy Students</p>
               <div className="flex items-center gap-1 mb-3">
                 <span className="font-bold text-neutral-950 text-[12px]">4.5</span>
