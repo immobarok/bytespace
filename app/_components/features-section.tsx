@@ -39,7 +39,7 @@ export default function FeaturesSection() {
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 xl:px-0 flex flex-col">
 
         {/* ROW 1 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left: Text */}
           <div className="flex flex-col max-w-[500px]">
             <h2 className="text-heading-m text-neutral-950 font-bold leading-[1.2] mb-6">
@@ -65,28 +65,30 @@ export default function FeaturesSection() {
           </div>
 
           {/* Right: Image Composition */}
-          <div className="relative w-full h-[600px] flex items-center justify-center">
-            {/* Background Course Card */}
-            <div className="absolute top-[40px] left-[40px] w-[373px] h-[384px] z-0">
-              <CourseCard {...MOCK_COURSES[0]} />
-            </div>
+          <div className="relative w-full h-[450px] sm:h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden lg:overflow-visible">
+            <div className="relative w-[500px] h-[600px] shrink-0 origin-center transform scale-[0.75] sm:scale-[0.85] lg:scale-100">
+              {/* Background Course Card */}
+              <div className="absolute top-[40px] left-[20px] w-[373px] h-[384px] z-0">
+                <CourseCard {...MOCK_COURSES[0]} isStatic />
+              </div>
 
-            {/* Boy Image */}
-            <div className="absolute bottom-15 z-10 w-[500px] h-[550px]">
-              <Image src="/images/hero/Image.png" alt="Student" fill className="object-contain" />
-            </div>
+              {/* Boy Image */}
+              <div className="absolute bottom-0 left-0 z-10 w-[500px] h-[550px]">
+                <Image src="/images/hero/Image.png" alt="Student" fill className="object-contain" />
+              </div>
 
-            {/* Zigzag Shape */}
-            <div className="absolute top-[20px] right-[-80px] z-50 w-[215px] h-[215px]">
-              <Image src="/images/shape/lime_spring.svg" alt="shape" fill className="object-contain" />
-            </div>
+              {/* Zigzag Shape */}
+              <div className="absolute top-[20px] right-[-40px] z-50 w-[215px] h-[215px]">
+                <Image src="/images/shape/lime_spring.svg" alt="shape" fill className="object-contain" />
+              </div>
 
-            {/* Learning Progress Card */}
-            <div className="absolute top-[160px] right-[-20px] bg-white rounded-[20px] shadow-xl z-30 p-5 w-[220px]">
-              <p className="text-neutral-950 mb-1 text-[13px] font-medium">Learning Progress</p>
-              <p className="font-bold text-neutral-950 mb-3 leading-none text-[40px]">55%</p>
-              <div className="w-full h-2 bg-neutral-100 rounded-full overflow-hidden">
-                <div className="w-[55%] h-full bg-lime-400 rounded-full" />
+              {/* Learning Progress Card */}
+              <div className="absolute top-[160px] right-[0px] bg-white rounded-[20px] shadow-xl z-30 p-5 w-[220px]">
+                <p className="text-neutral-950 mb-1 text-[13px] font-medium">Learning Progress</p>
+                <p className="font-bold text-neutral-950 mb-3 leading-none text-[40px]">55%</p>
+                <div className="w-full h-2 bg-neutral-100 rounded-full overflow-hidden">
+                  <div className="w-[55%] h-full bg-lime-400 rounded-full" />
+                </div>
               </div>
             </div>
           </div>
@@ -94,64 +96,65 @@ export default function FeaturesSection() {
 
 
         {/* ROW 2 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-12 lg:mt-0">
 
           {/* Left: Image Composition */}
-          <div className="relative w-full h-[600px] flex items-center justify-center order-2 lg:order-1">
-
-            {/* Woman Image */}
-            <div className="absolute bottom-0 z-10 w-[450px] h-[550px]">
-              <Image src="/images/hero/women.png" alt="Student" fill className="object-contain object-bottom" />
-            </div>
-
-            {/* Zigzag Shape */}
-            <div className="absolute top-[128px] right-[48px] z-50 w-[215px] h-[215px]">
-              <Image src="/images/shape/lime_spring_left.svg" alt="shape" fill className="object-contain" />
-            </div>
-
-            {/* Blue Cards Container */}
-            <div className="absolute top-[80px] left-[10px] z-0 flex flex-col gap-[31px]">
-              {/* Blue Card 1 */}
-              <div className="bg-[#003be2] rounded-[16px] shadow-lg p-5 w-[240px]">
-                <p className="text-white text-[16px] font-medium mb-1">Total Revenue</p>
-                <p className="text-white/60 text-[10px] mb-3">July 1-28</p>
-                <p className="text-white text-[24px] leading-[32px] font-bold mb-3">$120.29</p>
-                <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
-                  <div className="w-[60%] h-full bg-lime-400 rounded-full" />
-                </div>
+          <div className="relative w-full h-[450px] sm:h-[500px] lg:h-[600px] flex items-center justify-center order-2 lg:order-1 overflow-hidden lg:overflow-visible">
+            <div className="relative w-[500px] h-[600px] shrink-0 origin-center transform scale-[0.75] sm:scale-[0.85] lg:scale-100">
+              {/* Woman Image */}
+              <div className="absolute bottom-0 left-[25px] z-10 w-[450px] h-[550px]">
+                <Image src="/images/hero/women.png" alt="Student" fill className="object-contain object-bottom" />
               </div>
 
-              {/* Blue Card 2 */}
-              <div className="bg-[#003be2] rounded-[16px] shadow-lg p-4 w-[135px] h-[135px] flex flex-col justify-between overflow-hidden">
-                <div>
-                  <p className="text-white text-[16px] mb-1">Year to Date</p>
-                  <p className="text-white/60 text-[10px]">2023</p>
+              {/* Zigzag Shape */}
+              <div className="absolute top-[128px] right-[20px] z-50 w-[215px] h-[215px]">
+                <Image src="/images/shape/lime_spring_left.svg" alt="shape" fill className="object-contain" />
+              </div>
+
+              {/* Blue Cards Container */}
+              <div className="absolute top-[80px] left-[10px] z-0 flex flex-col gap-[31px]">
+                {/* Blue Card 1 */}
+                <div className="bg-[#003be2] rounded-[16px] shadow-lg p-5 w-[240px]">
+                  <p className="text-white text-[16px] font-medium mb-1">Total Revenue</p>
+                  <p className="text-white/60 text-[10px] mb-3">July 1-28</p>
+                  <p className="text-white text-[24px] leading-[32px] font-bold mb-3">$120.29</p>
+                  <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
+                    <div className="w-[60%] h-full bg-lime-400 rounded-full" />
+                  </div>
                 </div>
-                <div className="flex flex-col items-start gap-1">
-                  <p className="text-white text-[24px] leading-[32px] font-bold tracking-tighter whitespace-nowrap">$1,200.38</p>
-                  <div className="inline-flex items-center justify-center bg-lime-400 text-neutral-900 rounded-full px-2 py-0.5 text-[11px] font-bold leading-none h-[20px]">
-                    +12$
+
+                {/* Blue Card 2 */}
+                <div className="bg-[#003be2] rounded-[16px] shadow-lg p-4 w-[135px] h-[135px] flex flex-col justify-between overflow-hidden">
+                  <div>
+                    <p className="text-white text-[16px] mb-1">Year to Date</p>
+                    <p className="text-white/60 text-[10px]">2023</p>
+                  </div>
+                  <div className="flex flex-col items-start gap-1">
+                    <p className="text-white text-[24px] leading-[32px] font-bold tracking-tighter whitespace-nowrap">$1,200.38</p>
+                    <div className="inline-flex items-center justify-center bg-lime-400 text-neutral-900 rounded-full px-2 py-0.5 text-[11px] font-bold leading-none h-[20px]">
+                      +12$
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Happy Students Card */}
-            <div className="absolute bottom-[120px] right-[-10px] bg-white rounded-[16px] shadow-xl z-30 p-4 w-[240px]">
-              <p className="font-bold text-neutral-950 mb-1 text-[14px]">Happy Students</p>
-              <div className="flex items-center gap-1 mb-3">
-                <span className="font-bold text-neutral-950 text-[12px]">4.5</span>
-                <span className="text-neutral-500 text-[12px]">(240)</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="#D4FB20"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" /></svg>
-              </div>
-              <div className="flex -space-x-2">
-                {avatars.map((avatar, idx) => (
-                  <div key={idx} className="w-[32px] h-[32px] rounded-full border-2 border-white overflow-hidden relative">
-                    <Image src={avatar} alt="" fill className="object-cover" />
+              {/* Happy Students Card */}
+              <div className="absolute bottom-[120px] right-[10px] bg-white rounded-[16px] shadow-xl z-30 p-4 w-[240px]">
+                <p className="font-bold text-neutral-950 mb-1 text-[14px]">Happy Students</p>
+                <div className="flex items-center gap-1 mb-3">
+                  <span className="font-bold text-neutral-950 text-[12px]">4.5</span>
+                  <span className="text-neutral-500 text-[12px]">(240)</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#D4FB20"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" /></svg>
+                </div>
+                <div className="flex -space-x-2">
+                  {avatars.map((avatar, idx) => (
+                    <div key={idx} className="w-[32px] h-[32px] rounded-full border-2 border-white overflow-hidden relative">
+                      <Image src={avatar} alt="" fill className="object-cover" />
+                    </div>
+                  ))}
+                  <div className="w-[32px] h-[32px] rounded-full border-2 border-white bg-lime-400 flex items-center justify-center text-[9px] font-bold text-neutral-950">
+                    2K+
                   </div>
-                ))}
-                <div className="w-[32px] h-[32px] rounded-full border-2 border-white bg-lime-400 flex items-center justify-center text-[9px] font-bold text-neutral-950">
-                  2K+
                 </div>
               </div>
             </div>
