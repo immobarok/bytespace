@@ -4,10 +4,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white pt-[71px] pb-12">
-      <div className="max-w-[1200px] mx-auto w-full flex flex-col">
+    <footer className="w-full bg-white pt-12 lg:pt-[71px] pb-12 border-t border-neutral-100">
+      <div className="max-w-[1200px] mx-auto w-full flex flex-col px-4 xl:px-0">
         {/* Top Section */}
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-16 lg:gap-[92px]">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-[92px]">
 
           {/* Left Column */}
           <div className="flex flex-col w-full max-w-[528px]">
@@ -24,7 +24,7 @@ export default function Footer() {
               Stay Up to date with our latest features and releases by joining our newsletter.
             </p>
 
-            <form className="flex items-center gap-4 mt-8 w-full" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col sm:flex-row items-center gap-4 mt-8 w-full" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -33,9 +33,9 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-lime-400 hover:bg-lime-500 transition-colors text-label-l px-6 py-3 h-[46px] rounded-[100px] shrink-0"
+                className="w-full sm:w-auto bg-lime-400 hover:bg-lime-500 transition-colors text-label-l px-6 py-3 h-[52px] sm:h-[46px] rounded-[100px] shrink-0"
               >
-                Search
+                Subscribe
               </button>
             </form>
 
@@ -45,9 +45,9 @@ export default function Footer() {
           </div>
 
           {/* Right Columns */}
-          <div className="flex flex-wrap sm:flex-nowrap gap-[40px] w-full lg:w-auto mt-4 lg:mt-0">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-[40px] w-full lg:w-auto mt-4 lg:mt-0">
             {/* Column 1 */}
-            <ul className="flex flex-col gap-4 min-w-[140px]">
+            <ul className="flex flex-col gap-4">
               <li><Link href="#" className="text-body-s text-neutral-950 hover:text-neutral-900 transition-colors">Featured Courses</Link></li>
               <li><Link href="#" className="text-body-s text-neutral-950 hover:text-neutral-900 transition-colors">Featured Categories</Link></li>
               <li><Link href="#" className="text-body-s text-neutral-950 hover:text-neutral-900 transition-colors">Business</Link></li>
@@ -55,7 +55,7 @@ export default function Footer() {
               <li><Link href="#" className="text-body-s text-neutral-950 hover:text-neutral-900 transition-colors">Design</Link></li>
             </ul>
             {/* Column 2 */}
-            <ul className="flex flex-col gap-4 min-w-[140px]">
+            <ul className="flex flex-col gap-4">
               <li><Link href="#" className="text-body-s text-neutral-950 hover:text-neutral-900 transition-colors">Development</Link></li>
               <li><Link href="#" className="text-body-s text-neutral-950 hover:text-neutral-900 transition-colors">Marketing</Link></li>
               <li><Link href="#" className="text-body-s text-neutral-950 hover:text-neutral-900 transition-colors">Photography</Link></li>
@@ -63,7 +63,7 @@ export default function Footer() {
               <li><Link href="#" className="text-body-s text-neutral-950 hover:text-neutral-900 transition-colors">Sport</Link></li>
             </ul>
             {/* Column 3 */}
-            <ul className="flex flex-col gap-4 min-w-[140px]">
+            <ul className="flex flex-col gap-4 col-span-2 sm:col-span-1">
               <li><Link href="#" className="text-body-s text-neutral-950 hover:text-neutral-900 transition-colors">Become a Creator</Link></li>
               <li><Link href="#" className="text-body-s text-neutral-950 hover:text-neutral-900 transition-colors">Affiliate Program</Link></li>
               <li><Link href="#" className="text-body-s text-neutral-950 hover:text-neutral-900 transition-colors">Contact</Link></li>
