@@ -43,7 +43,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
         <div className="flex-1 flex flex-col lg:flex-row pb-10">
           
-          <div className="w-full lg:w-1/2 flex flex-col mb-16 lg:mb-0 pt-4">
+          <div className="hidden lg:flex w-full lg:w-1/2 flex-col mb-16 lg:mb-0 pt-4">
           <AuthText />
 
           <div className="relative w-full flex-1 min-h-[500px] mt-10">

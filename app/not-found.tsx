@@ -23,7 +23,7 @@ export default function NotFound() {
         </svg>
       </div>
 
-      <div className="relative z-10 flex flex-col items-center w-full">
+      <div className="relative z-10 flex flex-col items-center w-full mt-[60px] md:mt-[100px]">
         <div
           className="text-[480px] max-lg:text-[250px] max-md:text-[150px] font-semibold leading-none pointer-events-none select-none relative z-0 flex items-center justify-center"
           style={{
