@@ -1,6 +1,10 @@
+"use client";
+
 import CourseCard from "@/components/cards/course-card";
 import Link from "next/link";
 import MOCK_COURSES from "@/data/mock-courses.json";
+import { useQueryModal } from "@/hooks/useQueryModal";
+import { useSearchParams } from "next/navigation";
 
 const categories = [
   "Featured", "Music", "Drawing & Painting", "Marketing", "Animation", "Social Media", 
@@ -10,8 +14,12 @@ const categories = [
 ];
 
 export default function HomeCourses() {
+  const searchParams = useSearchParams();
+  const currentCategory = searchParams.get("category") || "Featured";
+  const { open: setCategory } = useQueryModal("category");
+
   return (
-    <section className="w-full bg-white py-24 flex flex-col items-center">
+    <section className="w-full bg-white py-24 flex flex-col items-center overflow-hidden">
       <div className="w-full max-w-[1200px] flex flex-col items-center px-4 xl:px-0">
         
         {/* Header Area */}
@@ -25,20 +33,24 @@ export default function HomeCourses() {
         </div>
 
         {/* Categories / Pills */}
-        <div className="flex flex-wrap justify-center gap-[21px] mb-16 max-w-[1186px]">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`px-4 py-3 rounded-full text-label-m font-medium transition-colors ${
-                category === "Featured" 
-                ? "bg-lime-400 text-neutral-950" 
-                : "bg-neutral-50 text-neutral-600 hover:bg-neutral-100"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-          <button className="px-4 py-3 text-label-m font-medium text-electric-violet-600 hover:text-electric-violet-800 transition-colors">
+        <div className="flex lg:flex-wrap overflow-x-auto lg:overflow-visible [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] justify-start lg:justify-center gap-3 lg:gap-[21px] mb-16 max-w-[1186px] w-full px-4 lg:px-0 -mx-4 lg:mx-0">
+          {categories.map((category) => {
+            const isActive = currentCategory === category;
+            return (
+              <button
+                key={category}
+                onClick={() => setCategory(category)}
+                className={`shrink-0 px-4 py-3 rounded-full text-label-m font-medium transition-colors ${
+                  isActive 
+                  ? "bg-lime-400 text-neutral-950" 
+                  : "bg-neutral-50 text-neutral-600 hover:bg-neutral-100"
+                }`}
+              >
+                {category}
+              </button>
+            );
+          })}
+          <button className="shrink-0 px-4 py-3 text-label-m font-medium text-electric-violet-600 hover:text-electric-violet-800 transition-colors">
             + More
           </button>
         </div>

@@ -35,10 +35,10 @@ export default function LearningPaths() {
         
         {/* Header Area */}
         <div className="text-center max-w-[860px] mb-12">
-          <h2 className="text-heading-m text-neutral-950 font-bold mb-4 leading-tight">
+          <h2 className="text-heading-s lg:text-heading-m text-neutral-950 font-bold mb-4 leading-tight">
             Explore Diverse Learning Paths at Bytespace
           </h2>
-          <p className="text-body-l text-neutral-400">
+          <p className="text-body-m lg:text-body-l text-neutral-400">
             At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there's something for everyone. Unleash your potential and explore our carefully curated categories.
           </p>
         </div>

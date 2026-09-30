@@ -159,10 +159,10 @@ export default function FeaturesSection() {
 
           {/* Right: Text */}
           <div className="flex flex-col max-w-[480px] order-1 lg:order-2 lg:pl-12">
-            <h2 className="text-heading-m text-neutral-950 font-bold leading-[1.2] mb-10">
+            <h2 className="text-heading-s lg:text-heading-m text-neutral-950 font-bold leading-[1.2] mb-10">
               Create & Manage<br />Courses Easily.
             </h2>
-            <p className="text-body-l text-neutral-500 mb-10 leading-relaxed">
+            <p className="text-body-m lg:text-body-l text-neutral-500 mb-10 leading-relaxed">
               <span className="font-semibold text-neutral-900">ByteSpace</span> supports individuals or entities in the creation, publication, and administration of educational courses.
             </p>
 

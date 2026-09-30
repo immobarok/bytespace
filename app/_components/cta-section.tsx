@@ -52,11 +52,11 @@ export default function CtaSection() {
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-[900px] mx-auto px-4 xl:px-0 flex flex-col items-center text-center">
-        <h2 className="text-neutral-50 text-heading-m mb-6">
-          Unlock Your Potential as a<br />Creator with ByteSpace
+        <h2 className="text-neutral-50 text-heading-s lg:text-heading-m mb-6">
+          Unlock Your Potential as a<br className="hidden lg:block" /> Creator with ByteSpace
         </h2>
         
-        <p className="text-neutral-50 text-body-l mb-10 max-w-[800px]">
+        <p className="text-neutral-50 text-body-m lg:text-body-l mb-10 max-w-[800px]">
           Experience the collaboration of numerous creators and an expanding selection of courses. Register now and become a part of a community comprising over 10,000 local and international creators. Utilize our Course Editor, and showcase your expertise by publishing your finest course on the ByteSpace Course Library.
         </p>
 

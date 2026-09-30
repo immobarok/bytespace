@@ -88,7 +88,7 @@ export default function CourseCard({
     </>
   );
 
-  const baseClasses = "w-[373px] h-[384px] p-4 rounded-[24px] border border-neutral-200 bg-white flex flex-col group";
+  const baseClasses = "w-full max-w-[373px] mx-auto h-[384px] p-4 rounded-[24px] border border-neutral-200 bg-white flex flex-col group";
   const linkClasses = "hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer";
 
   if (isStatic) {

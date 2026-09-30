@@ -46,14 +46,14 @@ export default function TestimonialsSection() {
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 xl:px-0 flex flex-col gap-16">
         
         {/* Header Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 items-start">
           <div>
-            <h2 className="text-heading-m text-neutral-950 font-bold leading-[1.2]">
+            <h2 className="text-heading-s lg:text-heading-m text-neutral-950 font-bold leading-[1.2]">
               Discover What Our<br />Community Is Saying
             </h2>
           </div>
           <div>
-            <p className="text-body-l text-neutral-600 leading-relaxed">
+            <p className="text-body-m lg:text-body-l text-neutral-600 leading-relaxed">
               At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform. Explore testimonials that reflect the diverse perspectives of enthusiastic learners and accomplished creators.
             </p>
           </div>
@@ -74,13 +74,13 @@ export default function TestimonialsSection() {
                   className="object-cover" 
                 />
               </div>
-              <h3 className="text-heading-xs font-bold text-neutral-950 mb-1">
+              <h3 className="text-body-l lg:text-heading-xs font-bold text-neutral-950 mb-1">
                 {testimonial.name}
               </h3>
-              <p className="text-body-l text-electric-violet-800 font-medium mb-6">
+              <p className="text-body-m lg:text-body-l text-electric-violet-800 font-medium mb-6">
                 {testimonial.role}
               </p>
-              <p className="text-body-l text-neutral-700 leading-relaxed">
+              <p className="text-body-m lg:text-body-l text-neutral-700 leading-relaxed">
                 {testimonial.text}
               </p>
             </div>
